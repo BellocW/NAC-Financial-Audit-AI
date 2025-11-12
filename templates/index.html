@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>NAC AI Audit Tool</title>
+    <title>NAC AI Financial Audit Tool</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h2>NAC AI Financial Audit Tool</h2>
+    <h1>NAC AI Financial Audit Tool</h1>
+
     <form method="post" enctype="multipart/form-data">
         <input type="file" name="csvfile" accept=".csv" required>
-        <button type="submit">Check Audit</button>
+        <button type="submit">Run Audit</button>
     </form>
 
     {% if issues %}
-        <h3>Audit Findings:</h3>
+        <h2>Audit Findings:</h2>
         <ul>
         {% for issue in issues %}
             <li>{{ issue }}</li>
         {% endfor %}
         </ul>
+
+        <h2>AI Summary:</h2>
+        <p>{{ summary }}</p>
     {% endif %}
 </body>
 </html>
