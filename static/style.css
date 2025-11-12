@@ -1,1 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #f8f8f8;
+}
 
+h1, h2 {
+    color: #003366;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input, button {
+    padding: 10px;
+    margin: 5px 0;
+}
+
+ul {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    list-style-type: square;
+}
